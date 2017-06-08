@@ -8,6 +8,45 @@ use Mix.Config
 # if you want to provide default values for your application for
 # 3rd-party users, it should be done in your "mix.exs" file.
 
+config :kernel, error_logger: :silent
+
+config :sasl, sasl_error_logger: false
+
+config :config, ini_files: [
+    # "./config/etc" |> String.to_charlist,
+    "./config/etc/default.ini" |> String.to_charlist,
+    "./config/etc/local.ini" |> String.to_charlist,
+  ]
+
+config :couch_epi, plugins: [
+      :couch_db_epi,
+      :chttpd_epi,
+      :couch_index_epi,
+      :global_changes_epi,
+      :mango_epi,
+      :mem3_epi
+      # :setup_epi
+    ]
+
+config :logger,
+  level: :debug
+  # handle_otp_reports: true,
+  # handle_sasl_reports: true
+
+# config :couch,
+#   package_author_name: "The Apache Software Foundation",
+#   prefix: ".",
+#   data_dir: "./data",
+#   view_index_dir: "./data",
+#   log_file: "",
+#   fauxton_root: "./share/www",
+#   user: "ROOT",
+#   node_name: "-name couchdb@localhost",
+#   cluster_port: 5984,
+#   backend_port: 5986
+
+
+
 # You can configure for your application as:
 #
 #     config :couchdb_mixapp, key: :value
