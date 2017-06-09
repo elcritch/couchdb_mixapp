@@ -29,7 +29,7 @@ config :couch_epi, plugins: [
     ]
 
 config :logger,
-  level: :debug
+  level: :info
   # handle_otp_reports: true,
   # handle_sasl_reports: true
 
