@@ -116,13 +116,13 @@ defmodule CouchdbMixapp.Mixfile do
       # {:elixir_make, "~> 0.4", runtime: false},
       {:setup, github: "uwiger/setup", manager: :rebar, override: true},
       # {:couchdb, github: "apache/couchdb", tag: "2.0.0"},
-      # {:couchdb, github: "apache/couchdb", branch: "2.1.x", manager: :make},
-      # {:couchdb, github: "apache/couchdb", branch: "2.1.x", manager: :make},
       {:docs, github: "apache/couchdb-documentation", ref: "8f0c98a7ade8ed50f8b5320410afbbdcc2be1127", compile: false,
           app: false, manager: :rebar, override: true},
-      {:fauxton, github: "apache/couchdb-fauxton", tag: "v1.1.9", app: false, manager: :rebar, override: true},
-      # {:couchdb, github: "apache/couchdb", tag: "2.0.0", manager: :rebar},
-      {:couchdb, github: "apache/couchdb", branch: "2.1.x", manager: :rebar, app: false},
+      {:fauxton, github: "apache/couchdb-fauxton", tag: "v1.1.11", app: false, manager: :rebar, override: true},
+      # {:couch, github: "elcritch/couchdb-couch", branch: "2.0.x-embedded", manager: :rebar, override: true},
+      # {:couchdb, github: "apache/couchdb", branch: "2.1.x", manager: :rebar, app: false},
+      {:couchdb, github: "elcritch/couchdb-embedded", branch: "2.1.x-nocouchjs", manager: :rebar, app: false},
+      # {:couchdb, github: "elcritch/couchdb-embedded", tag: "2.0.0", manager: :rebar, app: false},
     ]
   end
 end
