@@ -14,8 +14,8 @@ config :sasl, sasl_error_logger: false
 
 config :config, ini_files: [
     # "./config/etc" |> String.to_charlist,
-    "./config/etc/default.ini" |> String.to_charlist,
-    "./config/etc/local.ini" |> String.to_charlist,
+    "./config/db/default.ini" |> String.to_charlist,
+    "./config/db/local.ini" |> String.to_charlist,
   ]
 
 config :couch_epi, plugins: [
