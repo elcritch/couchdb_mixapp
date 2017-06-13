@@ -16,3 +16,12 @@ end
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/couchdb_mixapp](https://hexdocs.pm/couchdb_mixapp).
+
+
+## Setup New DB
+
+```sh
+curl -H 'Content-Type: application/json' -X PUT "http://localhost:5984/_users"
+curl -H 'Content-Type: application/json' -X PUT "http://localhost:5984/_metadata"
+curl -H 'Content-Type: application/json' -X PUT "http://localhost:5984/_replicator"
+```
