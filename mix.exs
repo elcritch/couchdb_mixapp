@@ -9,7 +9,12 @@ defmodule CouchdbMixapp.Mixfile do
     #  make_clean: ["clean"],
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps()]
+     description: description(),
+     package: package(),
+     deps: deps(),
+     name: "CouchdbMixapp",
+     source_url: "https://github.com/elcritch/couchdb_mixapp"
+   ]
   end
 
   # Configuration for the OTP application
@@ -120,14 +125,13 @@ defmodule CouchdbMixapp.Mixfile do
   end
 
   defp package do
-  # These are the default files included in the package
-  [
-    name: :couchdb_mixapp,
-    files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
-    maintainers: ["Jaremy Creechley"],
-    licenses: ["Apache 2.0"],
-    links: %{"GitHub" => "https://github.com/elcritch/couchdb_mixapp"}
-  ]
-end
+    [
+      name: :couchdb_mixapp,
+      files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
+      maintainers: ["Jaremy Creechley"],
+      licenses: ["Apache 2.0"],
+      links: %{"GitHub" => "https://github.com/elcritch/couchdb_mixapp"}
+    ]
+  end
 
 end
