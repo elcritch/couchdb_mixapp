@@ -2,7 +2,7 @@
   "bear": {:git, "https://github.com/apache/couchdb-bear.git", "008f48aff819126e281d5ccae80a258bf9bf9c30", [ref: "008f48aff819126e281d5ccae80a258bf9bf9c30"]},
   "certifi": {:hex, :certifi, "0.7.0", "861a57f3808f7eb0c2d1802afeaae0fa5de813b0df0979153cbafcd853ababaf", [:rebar3], [], "hexpm"},
   "config": {:git, "https://github.com/apache/couchdb-config.git", "f62d553b337ce975edb0fb68772d22bdd3bf6490", [ref: "f62d553b337ce975edb0fb68772d22bdd3bf6490"]},
-  "couchbeam_amuino": {:hex, :couchbeam_amuino, "1.4.3-amuino.5", "de905ce549c6d1dd8283fbaf9fd3a01560793780083e414d8b98331916fb7aa2", [:rebar3], [{:hackney, "1.6.5", [hex: :hackney, repo: "hexpm", optional: false]}, {:jsx, "2.8.0", [hex: :jsx, repo: "hexpm", optional: false]}], "hexpm"},
+  "couchbeam_amuino": {:hex, :couchbeam_amuino, "1.4.3-amuino.6", "71ec1214dfce38c205e4c545f4029d5850dd014a9047c342e2d32c5ae525710d", [:rebar3], [{:hackney, "1.6.5", [hex: :hackney, repo: "hexpm", optional: false]}, {:jsx, "2.8.0", [hex: :jsx, repo: "hexpm", optional: false]}], "hexpm"},
   "couchdb": {:git, "https://github.com/elcritch/couchdb-embedded.git", "63ab5ebf438010fb3fa4be24f43325ff7c5a2036", [branch: "2.1.x-nocouchjs"]},
   "couchex": {:git, "https://github.com/ringling/couchex.git", "472050eeb90d737248efd96f0a41de11134a3d58", []},
   "docs": {:git, "https://github.com/apache/couchdb-documentation.git", "8f0c98a7ade8ed50f8b5320410afbbdcc2be1127", [ref: "8f0c98a7ade8ed50f8b5320410afbbdcc2be1127"]},
