@@ -100,17 +100,9 @@ defmodule CouchdbMixapp.Mixfile do
     ]]
   end
 
-  # Dependencies can be Hex packages:
-  #
-  #   {:my_dep, "~> 0.3.0"}
-  #
-  # Or git/path repositories:
-  #
-  #   {:my_dep, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
-  #
-  # Type "mix help deps" for more examples and options
   defp deps do
     [
+      {:poison, "~> 3.0"},
       # {:setup_epi, "~> 0.3.0"},
       # {:mix_eunit, "~> 0.3.0"},
       # {:elixir_make, "~> 0.4", runtime: false},
@@ -123,6 +115,19 @@ defmodule CouchdbMixapp.Mixfile do
       # {:couchdb, github: "apache/couchdb", branch: "2.1.x", manager: :rebar, app: false},
       {:couchdb, github: "elcritch/couchdb-embedded", branch: "2.1.x-nocouchjs", manager: :rebar, app: false},
       # {:couchdb, github: "elcritch/couchdb-embedded", tag: "2.0.0", manager: :rebar, app: false},
+      {:couchex, "~> 0.8.1", github: "ringling/couchex"},
     ]
   end
+
+  defp package do
+  # These are the default files included in the package
+  [
+    name: :couchdb_mixapp,
+    files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
+    maintainers: ["Jaremy Creechley"],
+    licenses: ["Apache 2.0"],
+    links: %{"GitHub" => "https://github.com/elcritch/couchdb_mixapp"}
+  ]
+end
+
 end
