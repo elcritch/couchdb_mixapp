@@ -17,6 +17,13 @@ defmodule CouchdbMixapp.Mixfile do
    ]
   end
 
+  def description do
+    """
+    Embedded version of CouchDB that runs in embedded environments.
+    """
+  end
+
+
   # Configuration for the OTP application
   #
   # Type "mix help compile.app" for more information
