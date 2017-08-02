@@ -9,11 +9,12 @@ defmodule CouchdbMixapp.Mixfile do
     #  make_clean: ["clean"],
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     couch_apps_list: @couch_apps_list,
+     couch_apps_list: couch_apps_list(),
      deps: deps()]
   end
 
-  @couch_apps_list  [
+  def couch_apps_list() do
+    [
           :bear,
           :chttpd,
           :config,
@@ -44,6 +45,7 @@ defmodule CouchdbMixapp.Mixfile do
           :setup,
           :snappy
         ]
+  end
 
   # Configuration for the OTP application
   #
@@ -67,9 +69,9 @@ defmodule CouchdbMixapp.Mixfile do
        :xmerl,
        :b64url,
      ],
-     included_applications: @couch_apps_list,
+     included_applications: couch_apps_list(),
 
-    ]]
+    ]
   end
 
   defp deps do
