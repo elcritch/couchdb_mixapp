@@ -18,8 +18,8 @@ defmodule CouchdbMixApp.Runner do
 
     Logger.debug("CouchApp Lists: #{inspect @couch_apps_list}")
 
-    IO.puts("Setting couch_log level to warning")
-    :couch_log.set_level(:warning)
+    # IO.puts("Setting couch_log level to warning")
+    # :couch_log.set_level(:warning)
 
     {:ok, state}
   end
