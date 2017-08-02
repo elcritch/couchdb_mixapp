@@ -1,5 +1,8 @@
 defmodule CouchdbMixApp.Runner do
+  require Logger
   use GenServer
+
+  @couch_apps_list Mix.Project.config[:couch_apps_list]
 
   @doc """
   Start our queue and link it.  This is a helper function
@@ -17,6 +20,8 @@ defmodule CouchdbMixApp.Runner do
 
     :couch_log.set_level(:warning)
 
+    Logger.debug("CouchApp Lists: #{inspect @couch_apps_list}")
+    
     {:ok, state}
   end
 
