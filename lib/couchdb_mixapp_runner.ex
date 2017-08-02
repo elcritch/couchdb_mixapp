@@ -16,12 +16,11 @@ defmodule CouchdbMixApp.Runner do
   """
   def init(state) do
 
-    IO.puts("Setting couch_log level to warning")
+    Logger.debug("CouchApp Lists: #{inspect @couch_apps_list}")
 
+    IO.puts("Setting couch_log level to warning")
     :couch_log.set_level(:warning)
 
-    Logger.debug("CouchApp Lists: #{inspect @couch_apps_list}")
-    
     {:ok, state}
   end
 
