@@ -4,6 +4,11 @@ defmodule CouchdbMixApp.Runner do
 
   @couch_apps_list Mix.Project.config[:couch_apps_list]
 
+
+  def start_applications() do
+    GenServer.cast(__MODULE__, :start)
+  end
+
   @doc """
   Start our queue and link it.  This is a helper function
   """
@@ -16,7 +21,6 @@ defmodule CouchdbMixApp.Runner do
   """
   def init(state) do
 
-    Logger.debug("CouchApp Lists: #{inspect @couch_apps_list}")
 
     # IO.puts("Setting couch_log level to warning")
     # :couch_log.set_level(:warning)
@@ -24,4 +28,16 @@ defmodule CouchdbMixApp.Runner do
     {:ok, state}
   end
 
+
+  def handle_cast(:start, state) do
+
+    Logger.debug("CouchApp Lists: #{inspect @couch_apps_list}")
+
+    for app <- @couch_apps_list do
+      Logger.debug("CouchApp.Runner starting: #{inspect app}")
+      Application.ensure_started(app)
+    end
+
+    {:noreply, state}
+  end
 end
