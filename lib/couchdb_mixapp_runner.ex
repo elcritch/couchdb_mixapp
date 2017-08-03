@@ -35,7 +35,7 @@ defmodule CouchdbMixApp.Runner do
 
     for app <- @couch_apps_list do
       Logger.debug("CouchApp.Runner starting: #{inspect app}")
-      Application.ensure_started(app)
+      Application.ensure_all_started(app)
     end
 
     {:noreply, state}
